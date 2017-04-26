@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/gaoweian/Demo2/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# Hashtable和HashMap的区别
+* Hashtable:实现的是映像，不允许出现空键空值，线程安全，现已被HashMap替代。
+* HashMap：实现一个键到值映射的哈希表，通过get()获得value()，允许出现空键空值(因键的值是唯一的),线程不安全。
+# 在try中加return会走finally吗？
 ```
+    public class Demo{
+	public static void main(String[] args){
+		int a=0,b=2,c;
+		try{
+			c=a/b;
+			return ;
+		}catch (Exception e) {
+				e.printStackTrace();
+		}finally{
+			System.out.println("出口");
+		}
+	}
+}
+```
+* 会走
+  
+# ArrayList和LinkedList区别：
+* 实现一个数组，可以快速存取。
+* 实现一个链表，可以快速插入和移除数据。
+# StringBuffer和StringBuilder区别：
+* StringBuffer:StringBuffer是可变类，任何对它所指代的字符串的改变都不会产生新的对象。线程安全，适合多线程使用。
+* StringBuilder:在进行append时，选择StringBuffer。线程不安全，适合单线程使用。
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gaoweian/Demo2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
